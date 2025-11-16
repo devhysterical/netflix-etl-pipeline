@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: netflix_postgres
+    environment:
+      POSTGRES_DB: netflix_db
+      POSTGRES_USER: netflix_user
+      POSTGRES_PASSWORD: netflix_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U netflix_user -d netflix_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - netflix_network
+
+volumes:
+  postgres_data:
+
+networks:
+  netflix_network:
+    driver: bridge
