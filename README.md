@@ -25,7 +25,7 @@ Kết quả cuối cùng là một cơ sở dữ liệu được mô hình hóa 
 
 ---
 
-## 🛠️ Yêu cầu Hệ thống
+## Yêu cầu Hệ thống
 
 Đảm bảo máy của bạn có cài đặt:
 
