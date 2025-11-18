@@ -16,14 +16,14 @@ nav_order: 2
 
 ### Các bước
 
-#### 1️⃣ Clone và vào thư mục dự án
+#### 1. Clone và vào thư mục dự án
 
 ```bash
 git clone https://github.com/devhysterical/netflix-etl-pipeline.git
 cd netflix-etl-pipeline
 ```
 
-#### 2️⃣ Tạo môi trường ảo
+#### 2. Tạo môi trường ảo
 
 ```bash
 python -m venv venv
@@ -33,13 +33,13 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-#### 3️⃣ Cài đặt dependencies
+#### 3. Cài đặt dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 4️⃣ Khởi động PostgreSQL
+#### 4. Khởi động PostgreSQL
 
 ```bash
 docker-compose up -d
@@ -51,7 +51,7 @@ docker-compose up -d
 docker-compose ps
 ```
 
-#### 5️⃣ Chuẩn bị dữ liệu
+#### 5. Chuẩn bị dữ liệu
 
 **Option A: Tải thủ công**
 
@@ -64,7 +64,7 @@ docker-compose ps
 python src/extractor.py
 ```
 
-#### 6️⃣ Chạy ETL Pipeline
+#### 6. Chạy ETL Pipeline
 
 **Cách A: Jupyter Notebook (Khuyến nghị)**
 

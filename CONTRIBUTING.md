@@ -1,4 +1,4 @@
-# 🤝 Hướng dẫn Đóng góp - Netflix ETL Pipeline
+# Hướng dẫn Đóng góp - Netflix ETL Pipeline
 
 Cảm ơn bạn đã quan tâm đến đóng góp cho dự án! Hướng dẫn này sẽ giúp bạn bắt đầu.
 
@@ -302,4 +302,4 @@ Nếu có câu hỏi, vui lòng:
 
 Cảm ơn bạn đã đóng góp! 🙏
 
-**Happy Coding! 🚀**
+**Happy Coding!**

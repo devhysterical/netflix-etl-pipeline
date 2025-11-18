@@ -1,6 +1,6 @@
-# ❓ FAQ - Các Câu Hỏi Thường Gặp
+# Các Câu Hỏi Thường Gặp
 
-## 🔧 Cài đặt & Setup
+## Cài đặt & Setup
 
 ### Q1: Tôi cần cài đặt gì trước?
 
@@ -58,7 +58,7 @@ deactivate
 
 ---
 
-## 📊 Dữ liệu & CSV
+## Dữ liệu & CSV
 
 ### Q4: Tôi lấy dữ liệu ở đâu?
 
@@ -107,7 +107,7 @@ Không quá lớn, tốc độ xử lý < 1 phút.
 
 ---
 
-## 🔄 ETL Pipeline
+## ETL Pipeline
 
 ### Q7: ETL là gì?
 
@@ -156,7 +156,7 @@ Lợi ích:
 
 ---
 
-## 💾 Database & PostgreSQL
+## Database & PostgreSQL
 
 ### Q10: PostgreSQL là cái gì?
 
@@ -224,7 +224,7 @@ ORDER BY count DESC;
 
 ---
 
-## 📝 Jupyter Notebook
+## Jupyter Notebook
 
 ### Q14: Jupyter Notebook là gì?
 
@@ -264,7 +264,7 @@ jupyter notebook
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Q17: "Connection refused" - PostgreSQL không kết nối được?
 
@@ -340,7 +340,7 @@ docker-compose up -d
 
 ---
 
-## 📚 Mở rộng & Học tập
+## Mở rộng & Học tập
 
 ### Q21: Tôi có thể sửa đổi quy trình Transform không?
 
@@ -394,7 +394,7 @@ def custom_transformation(self):
 
 ---
 
-## 💡 Tips & Tricks
+## Tips & Tricks
 
 ### Q25: Làm cách nào tối ưu hiệu suất?
 
@@ -454,7 +454,7 @@ docker-compose up -d
 
 ---
 
-## 📞 Cần Giúp?
+## Cần Giúp?
 
 ### Q29: Tôi gặp lỗi không được liệt kê ở đây?
 
@@ -480,17 +480,17 @@ docker-compose up -d
 
 ---
 
-## 🎓 Tóm tắt
+## Tóm tắt
 
 **Nếu bạn nhớ 5 thứ này:**
 
-1. 📥 Extract CSV → Pandas DataFrame
-2. 🧹 Transform → Làm sạch, chuẩn hóa, tách
-3. 💾 Load → Vào PostgreSQL
-4. 🔍 Verify → Query & validate
-5. 📚 Learn → Documentation & examples
+1. Extract CSV → Pandas DataFrame
+2. Transform → Làm sạch, chuẩn hóa, tách
+3. Load → Vào PostgreSQL
+4. Verify → Query & validate
+5. Learn → Documentation & examples
 
-**Bạn sẽ thành công! ✓**
+**Bạn sẽ thành công!**
 
 ---
 

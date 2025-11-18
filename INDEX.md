@@ -1,10 +1,10 @@
-# 📑 Netflix ETL Pipeline - Documentation Index
+# Netflix ETL Pipeline - Documentation Index
 
 Chào mừng đến với Netflix ETL Pipeline! Đây là chỉ mục tài liệu để giúp bạn tìm thấy những gì bạn cần.
 
 ---
 
-## 🚀 Bắt Đầu Nhanh Chóng
+## Bắt Đầu Nhanh Chóng
 
 **Nếu bạn chỉ có 5 phút:**
 → Đọc [QUICKSTART.md](QUICKSTART.md)
@@ -17,7 +17,7 @@ Chào mừng đến với Netflix ETL Pipeline! Đây là chỉ mục tài liệ
 
 ---
 
-## 📚 Tài Liệu Chi Tiết
+## Tài Liệu Chi Tiết
 
 ### Giới thiệu & Tổng Quan
 
@@ -51,7 +51,7 @@ Chào mừng đến với Netflix ETL Pipeline! Đây là chỉ mục tài liệ
 
 ---
 
-## 🎯 Theo Mục Đích Sử Dụng
+## Theo Mục Đích Sử Dụng
 
 ### Tôi muốn Khởi động Dự án
 
@@ -87,12 +87,12 @@ Chào mừng đến với Netflix ETL Pipeline! Đây là chỉ mục tài liệ
 
 ---
 
-## 📂 Cấu Trúc Thư mục
+## Cấu Trúc Thư mục
 
 ```
 netflix-etl-pipeline/
 │
-├── 📖 TÀI LIỆU
+├── TÀI LIỆU
 │   ├── README.md              ← Chính (5 phút)
 │   ├── QUICKSTART.md          ← Nhanh (5 phút)
 │   ├── ARCHITECTURE.md        ← Kiến trúc (15 phút)
@@ -102,7 +102,7 @@ netflix-etl-pipeline/
 │   ├── PROJECT_SUMMARY.txt    ← Tóm tắt
 │   └── INDEX.md               ← File này
 │
-├── 💻 SOURCE CODE
+├── SOURCE CODE
 │   ├── src/
 │   │   ├── extractor.py       ← Extract step
 │   │   ├── transformer.py     ← Transform step
@@ -115,31 +115,31 @@ netflix-etl-pipeline/
 │   └── notebooks/
 │       └── netflix_etl_pipeline.ipynb ← Main notebook
 │
-├── 🐳 DOCKER
+├── DOCKER
 │   ├── docker-compose.yml     ← Docker config
 │   └── docker/
 │       └── init.sql           ← DB schema
 │
-├── ⚙️ CONFIGURATION
+├── CONFIGURATION
 │   ├── requirements.txt       ← Dependencies
 │   ├── .env.example           ← Environment template
 │   ├── .gitignore             ← Git rules
 │   ├── Makefile               ← Automation
 │   └── LICENSE                ← MIT License
 │
-├── 🔧 DEVELOPMENT
+├── DEVELOPMENT
 │   └── .vscode/
 │       ├── settings.json
 │       └── extensions.json
 │
-└── 📊 DATA
+└── DATA
     └── data/
         └── netflix_titles.csv ← Dataset (add here)
 ```
 
 ---
 
-## 🔍 Tìm Kiếm Nhanh
+## Tìm Kiếm Nhanh
 
 ### Bạn cần...
 
@@ -171,11 +171,11 @@ netflix-etl-pipeline/
 **Docker**
 
 - [docker-compose.yml](docker-compose.yml) - Config
-- [README.md](README.md) - Section "🐳 Quản lý Docker"
+- [README.md](README.md) - Section "Quản lý Docker"
 
 **Khắc phục Lỗi**
 
-- [README.md](README.md) - Section "🔧 Khắc phục Sự cố"
+- [README.md](README.md) - Section "Khắc phục Sự cố"
 - [FAQ.md](FAQ.md) - Section "Troubleshooting"
 
 **Database Schema**
@@ -185,7 +185,7 @@ netflix-etl-pipeline/
 
 ---
 
-## 📚 Đọc Theo Thứ Tự
+## Đọc Theo Thứ Tự
 
 ### Cho Người Bắt Đầu
 
@@ -204,12 +204,12 @@ netflix-etl-pipeline/
 ### Cho Data Analysts
 
 1. [SQL_EXAMPLES.sql](SQL_EXAMPLES.sql) - Query examples
-2. [README.md](README.md) - Section "📊 Ví dụ Truy vấn"
+2. [README.md](README.md) - Section "Ví dụ Truy vấn"
 3. Setup database → Run queries
 
 ---
 
-## ⚡ Quick Commands
+## Quick Commands
 
 ```bash
 # Setup (5 minutes)
@@ -235,7 +235,7 @@ docker-compose down
 
 ---
 
-## 📞 Cần Giúp?
+## Cần Giúp?
 
 1. **Kiểm tra FAQ.md** - Có thể câu hỏi của bạn đã được trả lời
 2. **Kiểm tra README.md Troubleshooting** - Giải pháp chung
@@ -244,7 +244,7 @@ docker-compose down
 
 ---
 
-## 📊 Thống Kê Tài liệu
+## Thống Kê Tài liệu
 
 | Tài liệu         | Dòng | Độ dài  |
 | ---------------- | ---- | ------- |
@@ -259,7 +259,7 @@ docker-compose down
 
 ---
 
-## ✅ Checklist Khởi Động
+## Checklist Khởi Động
 
 - [ ] Clone dự án: `git clone ...`
 - [ ] Đọc QUICKSTART.md
@@ -268,11 +268,11 @@ docker-compose down
 - [ ] Khởi động Docker: `docker-compose up -d`
 - [ ] Tải CSV: `data/netflix_titles.csv`
 - [ ] Chạy ETL: `python src/etl_pipeline.py`
-- [ ] Xác nhận thành công ✓
+- [ ] Xác nhận thành công
 
 ---
 
-## 🎓 Learning Path
+## Learning Path
 
 ```
 START
@@ -294,7 +294,7 @@ MASTERY! 🎉
 
 ---
 
-## 📈 Tài Liệu Bổ Sung
+## Tài Liệu Bổ Sung
 
 Sắp có thêm:
 
@@ -306,7 +306,7 @@ Sắp có thêm:
 
 ---
 
-## 🔗 Liên Kết Hữu ích
+## Liên Kết Hữu ích
 
 ### Official Documentation
 
@@ -326,7 +326,7 @@ Sắp có thêm:
 
 ---
 
-## 📝 Version & Updates
+## Version & Updates
 
 **Current Version:** 1.0.0  
 **Last Updated:** November 16, 2025  
@@ -335,7 +335,7 @@ Sắp có thêm:
 
 ---
 
-## 💡 Tips
+## Tips
 
 - Use `Ctrl+F` (Cmd+F) to search in documentation
 - Open documentation in VS Code for better formatting
@@ -345,4 +345,4 @@ Sắp có thêm:
 
 ---
 
-**Ready to start? → Go to [QUICKSTART.md](QUICKSTART.md) ✨**
+**Ready to start? → Go to [QUICKSTART.md](QUICKSTART.md)**
