@@ -51,11 +51,11 @@ class NetflixExtractor:
         try:
             print(f"Reading data from {self.data_path}...")
             df = pd.read_csv(self.data_path)
-            print(f"✓ Extracted {len(df)} rows and {len(df.columns)} columns")
+            print(f"Extracted {len(df)} rows and {len(df.columns)} columns")
             print(f"Columns: {df.columns.tolist()}")
             return df
         except Exception as e:
-            print(f"✗ Error reading CSV: {str(e)}")
+            print(f"Error reading CSV: {str(e)}")
             raise
 
     def extract_from_kaggle(self):
@@ -86,14 +86,14 @@ class NetflixExtractor:
             print(f"Downloading dataset from Kaggle: {dataset_name}...")
             api.dataset_download_files(dataset_name, path=download_path, unzip=True)
 
-            print(f"✓ Dataset downloaded to {download_path}")
+            print(f"Dataset downloaded to {download_path}")
 
             # Read the CSV file
             csv_file = os.path.join(download_path, "netflix_titles.csv")
             return self.extract_from_csv_with_path(csv_file)
 
         except Exception as e:
-            print(f"✗ Error downloading from Kaggle: {str(e)}")
+            print(f"Error downloading from Kaggle: {str(e)}")
             print("Please download manually from:")
             print("https://www.kaggle.com/datasets/shivamb/netflix-shows")
             raise
@@ -117,7 +117,7 @@ class NetflixExtractor:
 
         print(f"Reading data from {path}...")
         df = pd.read_csv(path)
-        print(f"✓ Extracted {len(df)} rows and {len(df.columns)} columns")
+        print(f"Extracted {len(df)} rows and {len(df.columns)} columns")
         return df
 
     def get_data_info(self, df):
@@ -175,7 +175,7 @@ class NetflixExtractor:
             print(f"✗ Missing columns: {missing_cols}")
             return False
 
-        print("✓ All required columns present")
+        print("All required columns present")
         return True
 
 

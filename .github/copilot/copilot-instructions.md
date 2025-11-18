@@ -1,6 +1,6 @@
-# 🎯 Hướng dẫn Tùy chỉnh cho GitHub Copilot
+# Hướng dẫn Tùy chỉnh cho GitHub Copilot
 
-## 📦 Ngữ cảnh Dự án
+## Ngữ cảnh Dự án
 
 Kho lưu trữ này chứa mã nguồn và tài nguyên cho một đường ống **ETL (Extract, Transform, Load)** được thiết kế để xử lý tập dữ liệu **Netflix Movies & TV Shows**.
 
@@ -8,7 +8,7 @@ Mục tiêu chính là thực hiện làm sạch và chuyển đổi dữ liệu
 
 ---
 
-## ✨ Công nghệ & Thư viện Chính
+## Công nghệ & Thư viện Chính
 
 - **Trích xuất/Chuyển đổi Dữ liệu:** Python với thư viện **Pandas**.
 - **Môi trường Phát triển:** **Jupyter Notebooks**.
@@ -16,16 +16,16 @@ Mục tiêu chính là thực hiện làm sạch và chuyển đổi dữ liệu
 
 ---
 
-## 🛠️ Các Bước & Yêu cầu Cụ thể của Đường ống ETL
+## Các Bước & Yêu cầu Cụ thể của Đường ống ETL
 
 Copilot nên ưu tiên các gợi ý và đoạn mã tạo điều kiện thuận lợi cho các bước sau, đảm bảo mã nguồn mạnh mẽ, hiệu quả và tuân theo phong cách Pythonic.
 
-### 1. 📥 Trích xuất Dữ liệu (E - Extract)
+### 1. Trích xuất Dữ liệu (E - Extract)
 
 - **Nguồn:** Tập dữ liệu thô **Netflix Movies & TV Shows**.
 - **Nhiệm vụ:** Mã nguồn nên tập trung vào việc đọc dữ liệu từ tệp CSV hoặc thiết lập kết nối để tải thông qua **Kaggle CLI/API** nếu cần. Thao tác khởi đầu là `pd.read_csv()`.
 
-### 2. 🧹 Chuyển đổi Dữ liệu (T - Transform)
+### 2. Chuyển đổi Dữ liệu (T - Transform)
 
 #### A. Làm sạch Dữ liệu
 
@@ -39,16 +39,16 @@ Copilot nên ưu tiên các gợi ý và đoạn mã tạo điều kiện thuậ
   1.  **`dim_movies`**: Chứa thông tin chi tiết về phim/chương trình.
   2.  **`dim_genres`**: Chứa danh sách các thể loại **duy nhất** (`genre_name`) và ID của chúng (`genre_id`).
 
-### 3. 💾 Tải Dữ liệu (L - Load)
+### 3. Tải Dữ liệu (L - Load)
 
 - **Đích đến:** Cơ sở dữ liệu **PostgreSQL**.
 - **Nhiệm vụ:** Thiết lập kết nối cơ sở dữ liệu và tải các DataFrames đã chuyển đổi (`dim_movies`, `dim_genres`) vào các bảng tương ứng. Ưu tiên sử dụng các phương pháp **chèn hàng loạt (bulk insertion)** như `to_sql` của Pandas hoặc các lệnh `COPY` của Psycopg2 để tối ưu hiệu suất.
 
-## 🏗️ Yêu cầu về Tài liệu và Môi trường (README & Docker)
+## Yêu cầu về Tài liệu và Môi trường (README & Docker)
 
 Ngoài mã nguồn ETL, Copilot phải hỗ trợ tạo ra các file tài liệu và cấu hình cần thiết để thiết lập môi trường dự án một cách nhanh chóng.
 
-### 4. 📄 Tài liệu Dự án
+### 4. Tài liệu Dự án
 
 - **Nhiệm vụ:** Tạo file **`README.md`** chi tiết để hướng dẫn người dùng thiết lập và chạy dự án.
 - **Nội dung Bắt buộc trong README.md:**
@@ -60,14 +60,14 @@ Ngoài mã nguồn ETL, Copilot phải hỗ trợ tạo ra các file tài liệu
       - **C. Cài đặt Phụ thuộc Python:** Lệnh `pip install -r requirements.txt`.
       - **D. Chạy ETL:** Hướng dẫn người dùng chạy Jupyter Notebook chính hoặc script ETL.
 
-### 5. 🐳 Cấu hình Cơ sở Dữ liệu Docker
+### 5. Cấu hình Cơ sở Dữ liệu Docker
 
 - **Công nghệ:** Sử dụng **Docker** để đóng gói và chạy cơ sở dữ liệu **PostgreSQL**.
 - **Nhiệm vụ:** Copilot nên gợi ý các cấu hình liên quan đến Docker, như nội dung mẫu cho file **`docker-compose.yml`** để dễ dàng tạo ra service PostgreSQL cần thiết cho bước Load (L).
 
 ---
 
-## 💡 Thực tiễn Mã hóa Ưu tiên & Điều kiện Bắt buộc
+## Thực tiễn Mã hóa Ưu tiên & Điều kiện Bắt buộc
 
 - **TUÂN THỦ THIẾT KẾ:** **Luôn luôn phản hồi bằng tiếng Việt, tuân thủ và ưu tiên các quy tắc, cấu trúc bảng, và logic nghiệp vụ đã được định nghĩa trong file Detailed Design của dự án.**
 - **Hiệu suất Pandas:** Ưu tiên **vectorization** của Pandas thay vì các vòng lặp Python thông thường.

@@ -1,4 +1,4 @@
-# 🏗️ Netflix ETL Pipeline - Architecture Documentation
+# Netflix ETL Pipeline - Architecture Documentation
 
 ## Tổng Quan Kiến Trúc
 
@@ -6,22 +6,22 @@ Netflix ETL Pipeline được thiết kế theo mô hình **3-layer architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│              DATA PRESENTATION LAYER                 │
+│              DATA PRESENTATION LAYER                │
 │  (Jupyter Notebooks, SQL Queries, Analytics Tools)  │
 └─────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────┐
-│              DATABASE LAYER                          │
+│              DATABASE LAYER                         │
 │  PostgreSQL (dim_movies, dim_genres, movies_genres) │
 └─────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────┐
-│              ETL PROCESSING LAYER                    │
+│              ETL PROCESSING LAYER                   │
 │  (Extract → Transform → Load Pipeline)              │
 └─────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────┐
-│              DATA SOURCE LAYER                       │
+│              DATA SOURCE LAYER                      │
 │  (CSV File / Kaggle Dataset)                        │
 └─────────────────────────────────────────────────────┘
 ```
@@ -36,11 +36,11 @@ Quản lý dữ liệu thô từ các nguồn:
 
 ```
 Input Sources:
-├── 📄 netflix_titles.csv (Kaggle Dataset)
+├── netflix_titles.csv (Kaggle Dataset)
 │   ├── 5,500+ rows
 │   ├── 12 columns
 │   └── ~350 KB size
-└── 🌐 Kaggle API (optional download)
+└── Kaggle API (optional download)
 ```
 
 ### Định dạng Dữ liệu Thô
@@ -86,7 +86,7 @@ Raw DataFrame
     ↓
 [Validate Schema]
     ↓
-✓ Ready for Transform
+Ready for Transform
 ```
 
 **Input:** `netflix_titles.csv` (5,500 rows × 12 columns)
@@ -346,7 +346,7 @@ Transformed Data
     ↓
 [Validate Load]
     ↓
-✓ Data in Database
+Data in Database
 ```
 
 **Module:** `src/loader.py`
@@ -447,30 +447,30 @@ with engine.connect() as connection:
 ```
 notebooks/netflix_etl_pipeline.ipynb
 │
-├── 📌 Setup & Imports
+├── Setup & Imports
 │   ├── Import libraries
 │   ├── Set Python path
 │   └── Load modules
 │
-├── 📥 EXTRACT
+├── EXTRACT
 │   ├── Initialize Extractor
 │   ├── Read CSV
 │   ├── Display info
 │   └── Validate data
 │
-├── 🧹 TRANSFORM
+├── TRANSFORM
 │   ├── Initialize Transformer
 │   ├── Run transformation
 │   ├── Create Star Schema
 │   └── Quality checks
 │
-├── 💾 LOAD
+├── LOAD
 │   ├── Connect to DB
 │   ├── Load 3 tables
 │   ├── Validate load
 │   └── Disconnect
 │
-└── 📊 ANALYSIS
+└── ANALYSIS
     ├── Movies vs TV Shows
     ├── Top genres
     ├── Release year trends
@@ -703,14 +703,15 @@ USER/Analyst
 ## Summary
 
 **Architecture Highlights:**
-✓ Modular design (Extract/Transform/Load)
-✓ Star Schema for analytics
-✓ Docker for easy deployment
-✓ Pandas for data manipulation
-✓ PostgreSQL for storage
-✓ Jupyter for exploration
-✓ Configuration management
-✓ Error handling throughout
+
+- Modular design (Extract/Transform/Load)
+- Star Schema for analytics
+- Docker for easy deployment
+- Pandas for data manipulation
+- PostgreSQL for storage
+- Jupyter for exploration
+- Configuration management
+- Error handling throughout
 
 **Technology Stack:**
 

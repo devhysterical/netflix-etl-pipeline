@@ -42,7 +42,7 @@ def main():
         loader.disconnect()
 
         print("\n" + "=" * 80)
-        print("✓ ETL PIPELINE COMPLETED SUCCESSFULLY!")
+        print("ETL PIPELINE COMPLETED SUCCESSFULLY!")
         print("=" * 80)
         print("\nYou can now query the data from PostgreSQL:")
         print("  - Host: localhost")
@@ -53,7 +53,7 @@ def main():
 
     except Exception as e:
         print("\n" + "=" * 80)
-        print("✗ ETL PIPELINE FAILED!")
+        print("ETL PIPELINE FAILED!")
         print("=" * 80)
         print(f"\nError: {str(e)}")
         print("\nTroubleshooting:")

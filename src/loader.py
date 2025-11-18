@@ -50,11 +50,11 @@ class NetflixLoader:
             with self.engine.connect() as connection:
                 connection.execute(text("SELECT 1"))
 
-            print(f"✓ Connected to {Config.DB_NAME} @ {Config.DB_HOST}:{Config.DB_PORT}")
+            print(f"Connected to {Config.DB_NAME} @ {Config.DB_HOST}:{Config.DB_PORT}")
             return self.engine
 
         except Exception as e:
-            print(f"✗ Connection failed: {str(e)}")
+            print(f"Connection failed: {str(e)}")
             print(f"\nDatabase URL: {self.database_url}")
             print("\nMake sure PostgreSQL is running:")
             print("  docker-compose up -d")
@@ -92,11 +92,11 @@ class NetflixLoader:
                 index=False,
             )
 
-            print(f"✓ Loaded {rows_inserted} genres")
+            print(f"Loaded {rows_inserted} genres")
             return rows_inserted
 
         except Exception as e:
-            print(f"✗ Error loading dim_genres: {str(e)}")
+            print(f"Error loading dim_genres: {str(e)}")
             raise
 
     def load_dim_movies(self, df_movies):
@@ -131,11 +131,11 @@ class NetflixLoader:
                 index=False,
             )
 
-            print(f"✓ Loaded {rows_inserted} movies")
+            print(f"Loaded {rows_inserted} movies")
             return rows_inserted
 
         except Exception as e:
-            print(f"✗ Error loading dim_movies: {str(e)}")
+            print(f"Error loading dim_movies: {str(e)}")
             raise
 
     def load_movies_genres(self, df_movies_genres):
@@ -170,11 +170,11 @@ class NetflixLoader:
                 index=False,
             )
 
-            print(f"✓ Loaded {rows_inserted} movie-genre relationships")
+            print(f"Loaded {rows_inserted} movie-genre relationships")
             return rows_inserted
 
         except Exception as e:
-            print(f"✗ Error loading movies_genres: {str(e)}")
+            print(f"Error loading movies_genres: {str(e)}")
             raise
 
     def load_all(self, star_schema):
@@ -212,7 +212,7 @@ class NetflixLoader:
             print("-" * 50)
 
         except Exception as e:
-            print(f"✗ Error loading data: {str(e)}")
+            print(f"Error loading data: {str(e)}")
             raise
 
         return results
@@ -271,7 +271,7 @@ class NetflixLoader:
                 print(sample_genres.to_string())
 
         except Exception as e:
-            print(f"✗ Validation error: {str(e)}")
+            print(f"Validation error: {str(e)}")
             raise
 
         return validation
@@ -280,7 +280,7 @@ class NetflixLoader:
         """Đóng kết nối"""
         if self.engine:
             self.engine.dispose()
-            print("✓ Disconnected from database")
+            print("Disconnected from database")
 
 
 def main():

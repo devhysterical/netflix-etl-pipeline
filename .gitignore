@@ -47,7 +47,6 @@ logs/
 *.log
 
 # README & txt files
-FAQ.md
 GET_STARTED.txt
 PROJECT_SUMMARY.txt
 COMPLETION_REPORT.txt

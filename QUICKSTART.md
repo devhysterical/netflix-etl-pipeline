@@ -4,7 +4,7 @@ title: Quick Start Guide
 nav_order: 2
 ---
 
-# 🚀 Hướng dẫn Khởi động Nhanh - Netflix ETL Pipeline
+# Quick Start Guide - Netflix ETL Pipeline
 
 ## 5 Phút để Bắt đầu
 
@@ -80,7 +80,7 @@ jupyter lab
 python src/etl_pipeline.py
 ```
 
-#### 7️⃣ Xác nhận thành công ✓
+#### 7. Confirm success
 
 Bạn sẽ thấy output tương tự:
 

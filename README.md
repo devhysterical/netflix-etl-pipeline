@@ -12,7 +12,7 @@ Kết quả cuối cùng là một cơ sở dữ liệu được mô hình hóa 
 
 ---
 
-## ✨ Công nghệ & Thư viện Chính
+## Technologies & Main Libraries
 
 | Công nghệ                 | Mục đích                            |
 | ------------------------- | ----------------------------------- |
@@ -46,7 +46,7 @@ git --version
 
 ---
 
-## 🚀 Hướng dẫn Khởi động Nhanh
+## Quick Start Guide
 
 ### Bước 1: Clone Dự án
 
@@ -157,7 +157,7 @@ netflix-etl-pipeline/
 
 ---
 
-## 📥 Bước 1: Trích xuất Dữ liệu (Extract)
+## Step 1: Extract Data (Extract)
 
 **Tệp liên quan:** `src/extractor.py`
 
@@ -281,7 +281,7 @@ Cấu trúc dữ liệu thô:
 
 ---
 
-## 💾 Bước 3: Tải Dữ liệu (Load)
+## Step 3: Load Data (Load)
 
 **Tệp liên quan:** `src/loader.py`
 
@@ -327,7 +327,7 @@ SELECT * FROM dim_genres LIMIT 10;
 
 ---
 
-## 📊 Ví dụ Truy vấn
+## Example Queries
 
 Sau khi tải xong, bạn có thể chạy các truy vấn phân tích:
 

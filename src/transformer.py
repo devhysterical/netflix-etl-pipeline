@@ -74,7 +74,7 @@ class NetflixTransformer:
 
         print(f"\nRows removed: {removed_rows}")
         print(f"Rows remaining: {final_rows}")
-        print("✓ Data cleaning completed")
+        print("Data cleaning completed")
 
         return self.df
 
@@ -107,11 +107,11 @@ class NetflixTransformer:
             if na_dates > 0:
                 print(f"⚠ Warning: {na_dates} invalid dates found")
 
-            print("✓ Date normalization completed")
+            print("Date normalization completed")
             print(f"Sample dates: {self.df['date_added'].head(3).values}")
 
         except Exception as e:
-            print(f"✗ Error normalizing dates: {str(e)}")
+            print(f"Error normalizing dates: {str(e)}")
             raise
 
         return self.df
@@ -137,7 +137,7 @@ class NetflixTransformer:
         for col in text_columns:
             if col in self.df.columns:
                 self.df[col] = self.df[col].str.strip()
-                print(f"✓ Normalized text in column: {col}")
+                print(f"Normalized text in column: {col}")
 
         return self.df
 
@@ -178,7 +178,7 @@ class NetflixTransformer:
         print(f"Rows before explode: {initial_rows}")
         print(f"Rows after explode: {final_rows}")
         print(f"Unique genres: {self.df['listed_in'].nunique()}")
-        print("✓ Genre explosion completed")
+        print("Genre explosion completed")
 
         return self.df
 
@@ -211,7 +211,7 @@ class NetflixTransformer:
         dim_genres["genre_id"] = range(1, len(dim_genres) + 1)
         dim_genres = dim_genres[["genre_id", "genre_name"]]
 
-        print(f"   ✓ Created {len(dim_genres)} unique genres")
+        print(f"   Created {len(dim_genres)} unique genres")
 
         # 2. Tạo dim_movies
         print("\n2. Creating dim_movies...")
@@ -260,7 +260,7 @@ class NetflixTransformer:
             ]
         ]
 
-        print(f"   ✓ Created {len(dim_movies)} unique movies")
+        print(f"   Created {len(dim_movies)} unique movies")
 
         # 3. Tạo mapping show_id -> movie_id
         print("\n3. Creating movies_genres junction table...")
@@ -280,7 +280,7 @@ class NetflixTransformer:
         movies_genres["movie_id"] = movies_genres["movie_id"].astype(int)
         movies_genres["genre_id"] = movies_genres["genre_id"].astype(int)
 
-        print(f"   ✓ Created {len(movies_genres)} movie-genre relationships")
+        print(f"   Created {len(movies_genres)} movie-genre relationships")
 
         # Summary
         print("\n" + "-" * 50)
@@ -317,7 +317,7 @@ class NetflixTransformer:
         star_schema = self.create_star_schema()
 
         print("\n" + "=" * 80)
-        print("✓ TRANSFORMATION COMPLETED SUCCESSFULLY")
+        print("TRANSFORMATION COMPLETED SUCCESSFULLY")
         print("=" * 80 + "\n")
 
         return star_schema
@@ -348,7 +348,7 @@ def main():
         print(star_schema["movies_genres"].head(10))
 
     except Exception as e:
-        print(f"✗ Error in transformation: {str(e)}")
+        print(f"Error in transformation: {str(e)}")
         import traceback
 
         traceback.print_exc()
