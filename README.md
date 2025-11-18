@@ -1,6 +1,6 @@
-# 🎬 Netflix ETL Pipeline
+# Netflix ETL Pipeline
 
-## 📋 Mô tả Dự án
+## Mô tả Dự án
 
 Đây là một đường ống **ETL (Extract, Transform, Load)** được thiết kế để xử lý tập dữ liệu **Netflix Movies & TV Shows**. Pipeline thực hiện các nhiệm vụ:
 
@@ -130,7 +130,7 @@ python src/etl_pipeline.py
 
 ---
 
-## 📁 Cấu Trúc Dự Án
+## Cấu Trúc Dự Án
 
 ```
 netflix-etl-pipeline/
@@ -199,7 +199,7 @@ Cấu trúc dữ liệu thô:
 
 ---
 
-## 🧹 Bước 2: Chuyển đổi Dữ liệu (Transform)
+## Bước 2: Chuyển đổi Dữ liệu (Transform)
 
 **Tệp liên quan:** `src/transformer.py`
 
@@ -360,7 +360,7 @@ ORDER BY count DESC;
 
 ---
 
-## 🐳 Quản lý Docker
+## Quản lý Docker
 
 ### Khởi động Services
 
@@ -409,7 +409,7 @@ docker-compose down -v
 
 ---
 
-## 🔧 Khắc phục Sự cố
+## Khắc phục Sự cố
 
 ### Vấn đề: PostgreSQL không kết nối được
 
@@ -453,7 +453,7 @@ jupyter lab --no-browser --ip=localhost --port=8888
 
 ---
 
-## 📝 Ghi chú Quan trọng
+## Ghi chú Quan trọng
 
 1. **Dữ liệu Nhạy cảm:** File `.env` chứa thông tin mật khẩu - Không commit vào Git
 2. **Volumes Docker:** Dữ liệu PostgreSQL được lưu trong volume `postgres_data` - Xóa volume sẽ mất dữ liệu
@@ -462,7 +462,7 @@ jupyter lab --no-browser --ip=localhost --port=8888
 
 ---
 
-## 📚 Tài liệu Tham khảo
+## Tài liệu Tham khảo
 
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [SQLAlchemy Documentation](https://docs.sqlalchemy.org/)
@@ -472,22 +472,16 @@ jupyter lab --no-browser --ip=localhost --port=8888
 
 ---
 
-## 👨‍💻 Tác giả
+## Tác giả
 
 **GitHub:** [@devhysterical](https://github.com/devhysterical)
 
 ---
 
-## 📄 Giấy phép
-
-Dự án này được cấp phép dưới giấy phép MIT. Xem file `LICENSE` để biết chi tiết.
-
----
-
-## 💬 Hỗ trợ
+## Hỗ trợ
 
 Nếu gặp vấn đề hoặc có câu hỏi, vui lòng tạo một **Issue** trên GitHub hoặc liên hệ qua email.
 
 ---
 
-**Cập nhật lần cuối:** November 16, 2025
+**Cập nhật lần cuối:** November 18, 2025
